@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Price Forecasting System</title>
+    <style>
+        body {
+            background-color: lightslategray;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgb(247, 194, 3);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group button {
+            background-color: darkcyan;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: teal;
+        }
+
+        .form-group select:hover,
+        .form-group input:hover {
+            background-color: #f0f0f0;
+        }
+
+        .prediction {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="{{ url_for('predict') }}" method="post">
+            <h2>Automotive Price Forecasting System</h2>
+
+            <div class="form-group">
+                <label for="manufacture-year">Manufacturing Year</label>
+                <input id="manufacture-year" name="Manufacturing_Year" type="number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="market-price">ShowRoom Price(in Lakhs)</label>
+                <input id="market-price" name="market_Price" type="number" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mileage">Total_Mileage</label>
+                <input id="mileage" name="Total_Mileage" type="number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="previous-owners">Past users</label>
+                <input id="previous-owners" name="Past users" type="number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fuel-type">Fuel Type</label>
+                <select id="fuel-type" name="Fuel_Type" required>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="seller-type">Seller Type</label>
+                <select id="seller-type" name="Seller_Type" required>
+                    <option value="Dealer">Dealer</option>
+                    <option value="Individual">Individual</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transmission">Engine model</label>
+                <select id="transmission" name="Transmission_Type" required>
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Predict Price</button>
+            </div>
+
+            <div class="prediction">
+                45 Lakhs
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

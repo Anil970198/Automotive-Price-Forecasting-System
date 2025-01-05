@@ -58,3 +58,7 @@ gunicorn
 * Feature Engineering:
 1. Added a new feature, `no_year`, to calculate the age of the car.
 2. Dropped unnecessary columns like `Year` and `Current Year`.
+
+
+# Final Otutput 
+![Screenshot (1214)](https://github.com/user-attachments/assets/c420a5fd-aaee-4d96-9b01-78b73c97c2e2)

@@ -49,4 +49,12 @@ gunicorn
   # Overview of the dataset
   After meticulously treating the data correlation functions have been applied and this is the resulted table that shows the correlation among various features in the dataset![image](https://github.com/user-attachments/assets/8a3aba6b-89f0-4622-b55c-f0a252451cce)
 
-# 
+# 1. Data Understanding and Preprocessing
+1. Dataset Loaded: `my_dataset.csv` was loaded to analyze and preprocess data.
+2. Data Exploration:
+3. Checked unique values of categorical features like `Seller_Type`, `Fuel_Type`, and `Transmission`.
+4. Verified there were no missing values.
+5. Generated descriptive statistics using `.describe()`.
+* Feature Engineering:
+1. Added a new feature, `no_year`, to calculate the age of the car.
+2. Dropped unnecessary columns like `Year` and `Current Year`.

@@ -44,7 +44,7 @@ This project is a Flask-based web application that predicts the resale price of 
 * Werkzeug==1.0.1
 * wincertstore==0.2
 * gunicorn
-'''
+```
 
   # Overview of the dataset
   After meticulously treating the data correlation functions have been applied and this is the resulted table that shows the correlation among various features in the dataset![image](https://github.com/user-attachments/assets/8a3aba6b-89f0-4622-b55c-f0a252451cce)
